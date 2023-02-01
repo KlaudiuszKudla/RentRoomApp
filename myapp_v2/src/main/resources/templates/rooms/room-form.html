@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Save Room</title>
+</head>
+
+
+<body>
+
+	<div class="container">
+	
+		<h3>Room Directory</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Save Room</p>
+		
+		<form action="#" th:action="@{/rooms/save}"
+						  method="POST">
+						 
+				<input type="hidden" th:field="*{rooms.id}"/>		 
+				
+				<input type="text" th:field="*{rooms.roomSize}"
+						class="form-control mb-4 col-4" placeholder="Room Size">
+				<input type="text" th:field="*{rooms.roomStatus}"
+						class="form-control mb-4 col-4" placeholder="Status">
+				<input type="text" th:field="*{rooms.roomType}"
+						class="form-control mb-4 col-4" placeholder="Type">
+				<input type="text" th:field="*{rooms.roomCapacity}"
+						class="form-control mb-4 col-4" placeholder="Capacity">
+				<input type="text" th:field="*{rooms.location.streetAddress}"
+						class="form-control mb-4 col-4" placeholder="Street Address">
+				<input type="text" th:field="*{rooms.location.postalCode}"
+						class="form-control mb-4 col-4" placeholder="Postal Code">
+				<input type="text" th:field="*{rooms.location.cityName}"
+						class="form-control mb-4 col-4" placeholder="City Name">
+				
+				<button type="submit" class="btn btn-info col-2">Save</button>	
+						
+								
+												
+		</form>
+			<hr>
+			<a th:href="@{/rooms/list}">Back to Users List</a>
+		
+	</div>
+
+</body>
+
+

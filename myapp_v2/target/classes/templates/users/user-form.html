@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Save User</title>
+</head>
+
+
+<body>
+
+	<div class="container">
+	
+		<h3>User Directory</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Save User</p>
+		
+		<form action="#" th:action="@{/users/save}"
+						  method="POST">
+						
+					 
+				<input type="hidden" th:field="*{users.id}"/>	
+				<input type="hidden" th:field="*{users.location.id}"/>			 
+				
+				<input type="text" th:field="*{users.userPasswordDigest}"
+						class="form-control mb-4 col-4" placeholder="Pasword Digest">
+				<input type="text" th:field="*{users.userName}"
+						class="form-control mb-4 col-4" placeholder="Name">
+				<input type="text" th:field="*{users.userSurname}"
+						class="form-control mb-4 col-4" placeholder="Surname">
+				<input type="text" th:field="*{users.userType}"
+						class="form-control mb-4 col-4" placeholder="Type">
+				<input type="text" th:field="*{users.userPhone}"
+						class="form-control mb-4 col-4" placeholder="Phone Number">
+				<input type="text" th:field="*{users.userEmail}"
+						class="form-control mb-4 col-4" placeholder="Email">	 
+				
+				<input type="text" th:field="*{users.location.streetAddress}"
+						class="form-control mb-4 col-4" placeholder="Street Address">
+				<input type="text" th:field="*{users.location.postalCode}"
+						class="form-control mb-4 col-4" placeholder="Postal Code">
+				<input type="text" th:field="*{users.location.cityName}"
+						class="form-control mb-4 col-4" placeholder="City Name">
+							
+				<button type="submit" class="btn btn-info col-2">Save</button>	
+																					
+		</form>
+		
+		
+		
+		
+			<hr>
+			<a th:href="@{/users/list}">Back to Users List</a>
+		
+	</div>
+
+</body>
+
+

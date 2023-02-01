@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+        <title>Hello World!</title>
+    </head>
+    <body>
+    	<div class="container">
+        <h1 th:inline="text">Hello !</h1>
+        <form th:action="@{/users/list}" method="GET">
+            <input type="submit" value="Users"/>
+        </form>
+        
+        <form th:action="@{/rooms/list}" method="GET">
+            <input type="submit" value="Rooms"/>
+        </form>
+        <form th:action="@{/rents/list}" method="GET">
+            <input type="submit" value="Rents"/>
+        </form>
+        <form th:action="@{/locations/list}" method="GET">
+            <input type="submit" value="Locations"/>
+        </form>
+        
+        </div>
+    </body>
+</html>
